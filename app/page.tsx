@@ -455,37 +455,37 @@ export default function EuroWeldProWebsite() {
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-orange-50 to-orange-100">
                 <CardHeader className="pb-4">
                   <Factory className="h-12 w-12 sm:h-16 sm:w-16 text-orange-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm sm:text-base">Boiler Construction</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Boiler Construction</CardTitle>
                 </CardHeader>
               </Card>
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-blue-100">
                 <CardHeader className="pb-4">
                   <Fuel className="h-12 w-12 sm:h-16 sm:w-16 text-blue-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm:text-base">Oil & Gas</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Oil & Gas</CardTitle>
                 </CardHeader>
               </Card>
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-green-50 to-green-100">
                 <CardHeader className="pb-4">
                   <Utensils className="h-12 w-12 sm:h-16 sm:w-16 text-green-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm:text-base">Food Industry</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Food Industry</CardTitle>
                 </CardHeader>
               </Card>
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-cyan-50 to-cyan-100">
                 <CardHeader className="pb-4">
                   <Ship className="h-12 w-12 sm:h-16 sm:w-16 text-cyan-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm:text-base">Shipbuilding</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Ship Building</CardTitle>
                 </CardHeader>
               </Card>
-              <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-purple-50 to-purple-100 col-span-2 sm:col-span-1">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-purple-50 to-purple-100">
                 <CardHeader className="pb-4">
                   <Building2 className="h-12 w-12 sm:h-16 sm:w-16 text-purple-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm:text-base">Fertilizer Manufacturing</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Fertilizer Manufacturing</CardTitle>
                 </CardHeader>
               </Card>
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-red-50 to-red-100">
                 <CardHeader className="pb-4">
                   <Ship className="h-12 w-12 sm:h-16 sm:w-16 text-red-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-sm:text-base">Marine Engineering</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Marine Engineering</CardTitle>
                 </CardHeader>
                 <CardFooter>
                   <div className="space-y-2">
@@ -493,7 +493,6 @@ export default function EuroWeldProWebsite() {
                       onClick={() => setOpen(true)}
                       className="flex items-center space-x-2 text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
                     >
-                      <Download className="h-4 w-4" />
                       <span>View Certificates</span>
                     </button>
                   </div>

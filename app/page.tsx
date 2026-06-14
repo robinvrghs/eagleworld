@@ -1,7 +1,8 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import PdfModal from "@/components/ui/pdf-modal"
 import {
   CheckCircle,
   Users,
@@ -24,7 +25,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 function updateDots(activeIndex: number) {
   const dots = document.querySelectorAll(".slider-dot")
@@ -76,6 +77,9 @@ export default function EuroWeldProWebsite() {
       slider.dataset.currentIndex = "0"
     }
   }, [])
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
@@ -478,6 +482,30 @@ export default function EuroWeldProWebsite() {
                   <CardTitle className="text-slate-800 text-sm:text-base">Fertilizer Manufacturing</CardTitle>
                 </CardHeader>
               </Card>
+              <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-red-50 to-red-100">
+                <CardHeader className="pb-4">
+                  <Ship className="h-12 w-12 sm:h-16 sm:w-16 text-red-600 mx-auto mb-2" />
+                  <CardTitle className="text-slate-800 text-sm:text-base">Marine Engineering</CardTitle>
+                </CardHeader>
+                <CardFooter>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => setOpen(true)}
+                      className="flex items-center space-x-2 text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
+                    >
+                      <Download className="h-4 w-4" />
+                      <span>View Certificates</span>
+                    </button>
+                  </div>
+
+                  <PdfModal
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    pdfUrl="/marine-cert.pdf"
+                  />
+
+                </CardFooter>
+              </Card>
             </div>
           </div>
           <br />
@@ -665,9 +693,8 @@ export default function EuroWeldProWebsite() {
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index) => (
                   <button
                     key={index}
-                    className={`slider-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                      index === 0 ? "bg-orange-500" : "bg-white/50 hover:bg-white/70"
-                    }`}
+                    className={`slider-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${index === 0 ? "bg-orange-500" : "bg-white/50 hover:bg-white/70"
+                      }`}
                     onClick={() => {
                       const slider = document.getElementById("slider")
                       if (slider) {

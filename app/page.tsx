@@ -485,7 +485,7 @@ export default function EuroWeldProWebsite() {
               <Card className="text-center hover:shadow-lg transition-shadow bg-gradient-to-br from-red-50 to-red-100">
                 <CardHeader className="pb-4">
                   <Ship className="h-12 w-12 sm:h-16 sm:w-16 text-red-600 mx-auto mb-2" />
-                  <CardTitle className="text-slate-800 text-lg">Marine Engineering</CardTitle>
+                  <CardTitle className="text-slate-800 text-lg">Marine Construction</CardTitle>
                 </CardHeader>
                 <CardFooter>
                   <div className="space-y-2">
